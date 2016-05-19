@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Topic</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for signup <- @signup do %>
+    <tr>
+      <td><%= signup.name %></td>
+      <td><%= signup.topic %></td>
+      <td><%= signup.description %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New signup", to: signup_path(@conn, :new) %>
